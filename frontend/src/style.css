@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+}
+
+/* Define the theme application */
+@theme {
+  /* Color */
+  --color-orange-500: #f57c3b;
+  --color-white-500: #e0fbfc;
+  --color-beige-500: #f0ebd8;
+  --color-dark-500: #0d1321;
+  --color-gray-500: #1b263b;
+
+  /* Font */
+  --font-roboto: "Roboto", sans-serif;
+}
+
+/* GLobal */
+#app {
+  @apply font-roboto;
+}
+
+/* Utilities */
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.link {
+  @apply text-primary
+}
