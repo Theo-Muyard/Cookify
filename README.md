@@ -1,5 +1,36 @@
-# Vue 3 + Vite
+# 🍳 Cookify
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Cookify est une application web fullstack pour créer, gérer et consulter des recettes de cuisine. Chaque recette inclut un titre, une description, des ingrédients et des étapes de préparation.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🔧 Stack technique
+
+- **Frontend** : Vue 3, Vite, Tailwind CSS, DaisyUI
+- **Backend** : Node.js, Express
+- **Base de données** : MongoDB
+- **Authentification** : JWT (via cookies HTTPOnly)
+- **Autres outils** : Axios, ESLint, Vite
+
+## 📦 Installation
+
+### Prérequis
+
+- Node.js ≥ 16
+- MongoDB
+
+### Étapes
+
+```bash
+git clone https://github.com/Theo-Muyard/Cookify.git
+cd Cookify
+
+# Backend
+cd backend
+npm install
+# Crée un fichier .env avec MONGODB_URI, JWT_SECRET
+npm run dev
+
+# Frontend
+cd ../frontend
+npm install
+npm run dev
+```
