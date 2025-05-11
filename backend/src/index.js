@@ -35,7 +35,3 @@ app.listen(PORT, () => {
 // Get the routes
 app.use("/api/auth", authRoute);
 app.use("/api/recipe", recipeRoute);
-
-app.get("/recipe", protectedRoute, (req, res) => {
-  res.send("test validé")
-})

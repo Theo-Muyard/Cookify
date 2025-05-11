@@ -19,7 +19,7 @@ export const signupController = async (req, res) => {
   const verifiedEmail = regexEmail.exec(email);
 
   if (!fullName.trim() || !email.trim() || !password.trim()) {
-    return res.status(400).json({ message: "All fields required" });
+    return res.status(400).json({ message: "All fields Required" });
   }
 
   if (!verifiedEmail) {
@@ -47,7 +47,7 @@ export const signupController = async (req, res) => {
     });
 
     await newUser.save();
-    res.status(200).json({ message: "Successfully registered" });
+    res.status(200).json({ message: "Successfully Registered" });
   } catch (error) {
     serverError("signup", res, error);
   }
@@ -60,7 +60,7 @@ export const loginController = async (req, res) => {
     const verifiedEmail = regexEmail.exec(email);
 
     if (!email.trim() || !password.trim()) {
-      return res.status(400).json({ message: "All fields required" });
+      return res.status(400).json({ message: "All fields Required" });
     }
 
     if (!verifiedEmail) {
@@ -70,7 +70,7 @@ export const loginController = async (req, res) => {
     const user = await User.findOne({ email: email.trim() });
 
     if (!user) {
-      return res.status(400).json({ message: "Invalid identifiers" });
+      return res.status(400).json({ message: "Invalid Identifiers" });
     }
 
     const isValidPassword = await bcrypt.compare(
@@ -79,7 +79,7 @@ export const loginController = async (req, res) => {
     );
 
     if (!isValidPassword) {
-      return res.status(400).json({ message: "Invalid identifiers" });
+      return res.status(400).json({ message: "Invalid Identifiers" });
     }
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
