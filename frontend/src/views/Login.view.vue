@@ -1,0 +1,78 @@
+<script setup></script>
+
+<template>
+  <div
+    class="bg-[url(/assets/cookify_bg.jpg)] bg-cover h-screen w-full flex justify-center items-center"
+  >
+    <!-- Container Signup -->
+    <div class="bg-neutral w-full mx-5 rounded-md flex flex-col gap-10 p-8 max-w-110">
+      <!-- Text -->
+      <div class="text-center">
+        <h2 class="text-primary text-2xl font-medium md:text-3xl">Welcome Back</h2>
+        <span class="text-secondary">Sign in to your account</span>
+      </div>
+      <!-- Champs -->
+      <div class="flex flex-col justify-between items-center flex-1 gap-5">
+        <label
+          class="input validator bg-transparent text-secondary border-secondary w-full md:input-lg"
+        >
+          <svg
+            class="h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <g
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="2.5"
+              fill="none"
+              stroke="currentColor"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </g>
+          </svg>
+          <input type="email" placeholder="mail@site.com" required />
+        </label>
+        <label
+          class="input validator bg-transparent text-secondary border-secondary w-full md:input-lg"
+        >
+          <svg
+            class="h-[1em] opacity-50"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <g
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="2.5"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+              ></path>
+              <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+            </g>
+          </svg>
+          <input
+            type="password"
+            required
+            placeholder="Password"
+            minlength="8"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+          />
+        </label>
+      </div>
+      <div>
+        <!-- Button -->
+        <button class="bg-primary text-neutral py-2 rounded-sm w-full mb-2 md:text-xl">Sign in</button>
+        <!-- Text -->
+        <p class="text-secondary text-center">
+          Don't have an account? <a href="/signup" class="text-primary">Create account</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</template>

@@ -3,30 +3,30 @@ import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
 
-// Pages
-import SignupPage from "./pages/Signup.page.vue";
-import LoginPage from "./pages/Login.page.vue";
-import HomePage from "./pages/Home.page.vue";
+// Views
+import SignupView from "./views/Signup.View.vue";
+import LoginView from "./views/Login.view.vue";
+import HomeView from "./views/Home.view.vue";
 import axiosInstance from "./tools/axios.tool";
 const routes = [
   // Home
   {
     path: "/",
     name: "Home",
-    component: HomePage,
+    component: HomeView,
     meta: { requiresAuth: true },
   },
   // Auth
   {
     path: "/signup",
     name: "Signup",
-    component: SignupPage,
+    component: SignupView,
     meta: { guestOnly: true },
   },
   {
     path: "/login",
     name: "Login",
-    component: LoginPage,
+    component: LoginView,
     meta: { guestOnly: true },
   },
 ];
