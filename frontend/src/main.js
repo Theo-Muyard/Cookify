@@ -4,7 +4,7 @@ import "./style.css";
 import App from "./App.vue";
 
 // Views
-import SignupView from "./views/Signup.View.vue";
+import SignupView from "./views/Signup.view.vue";
 import LoginView from "./views/Login.view.vue";
 import HomeView from "./views/Home.view.vue";
 import axiosInstance from "./tools/axios.tool";
@@ -31,7 +31,7 @@ const routes = [
   },
 ];
 
-const router = createRouter({
+export const router = createRouter({
   history: createWebHistory(),
   routes,
 });

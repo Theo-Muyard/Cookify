@@ -12,13 +12,13 @@ import { serverError } from "../tools/error.js";
 const regexEmail = /^\S+@\S+\.\S+$/;
 
 export const signupController = async (req, res) => {
-  const { fullName, email, password } = req.body;
+  const { username, email, password } = req.body;
 
   console.log(req.body);
 
   const verifiedEmail = regexEmail.exec(email);
 
-  if (!fullName.trim() || !email.trim() || !password.trim()) {
+  if (!username.trim() || !email.trim() || !password.trim()) {
     return res.status(400).json({ message: "All fields Required" });
   }
 
@@ -41,7 +41,7 @@ export const signupController = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password.trim(), 10);
 
     const newUser = await new User({
-      fullName: fullName.trim(),
+      username: username.trim(),
       email: email.trim(),
       password: hashedPassword,
     });
@@ -98,7 +98,7 @@ export const loginController = async (req, res) => {
         message: "Successfully Connected",
         user: {
           id: user._id,
-          fullName: user.fullName,
+          username: user.username,
           email: user.email,
         },
       });

@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="bg-neutral h-15 md:h-20 flex justify-between items-center px-5 md:px-20"
+    class="bg-neutral h-15 md:h-15 flex justify-between items-center px-5 md:px-20"
   >
     <img class="h-full w-auto" src="/assets/logo.png" alt="Logo" />
     <svg
@@ -19,7 +19,7 @@
     </svg>
   </div>
 
-  <div class="bg-primary flex justify-between items-center text-base px-5 h-11 md:h-15 md:text-base md:px-15 lg:px-30 xl:px-50">
+  <div class="bg-primary flex justify-between items-center text-base px-5 h-11 md:h-10 md:text-base md:px-15 lg:px-30 xl:px-50">
     <span class="text-neutral">Add a recipe easily as this</span>
     <button class="bg-neutral text-secondary px-8 py-1 rounded-sm">Create</button>
   </div>
